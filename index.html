@@ -4,11 +4,89 @@
 <title> Hello Page
 </title>
 <link rel="stylesheet" type="text/css" href="test.css">
-<head>
+
+</head>
+
 <body>
 Hi
+
+<hr>
+
+<div id="lendiv"><u>OnClick Events</u></div>
+<div id="upleft"><button id="nButton" onclick="clickfn()">Normal Fn Click Me</button>
+<button id ="n1Button" >JS AddList Click Me</button> </div>
+<div id="upright"><marquee  id="demo"direction="right"> </marquee></div>
+<br><br><br>
+
+<hr>
+<div id="lendiv"><u>OnContextmenu Events</u></div>
+<p oncontextmenu="contextMenufn()"><a href ="" >Don't Right click here </a></p>
+
+<hr>
+<div id="lendiv"><u>OnDoubleClick Events</u></div>
+<div id="upleft"><button id ="nlButton"  ondblclick="onDoubleclick()">Dont ever Double Click Me</button> </div>
+<div id="upright"><marquee id="demodb" direction="right"> </marquee></div>
+<br><br><br>
+<hr>
+
+<div id="lendiv"><u>OnMouse Down / Up Events</u></div>
+<div id="upleft"><button id ="mousdown"  onmousedown="OnmousDown()" onmouseup="OnmousUp()">Dont click Mouse down</button> </div>
+<div id="upright"><marquee id="demo_Mdown" direction="right"> </marquee></div>
+<br><br><br>
+<hr>
+
 <script>
+
 //alert("sandy")
+
+document.write(document.doctype)
+document.write(document.documentElement)
+document.write(document.activeElement)
+
+// OnClick using JS
+document.getElementById("nButton").onclick=function() {clickfn()}
+
+document.getElementById("n1Button").addEventListener("click" , clickAddList)
+
+function clickAddList()
+{
+var x = document.getElementById("demo");
+x.innerHTML ="Add Listnener now you Clicked Me!!!"
+}
+
+//Normal Onclick Event
+function clickfn()
+{
+var x = document.getElementById("demo");
+x.innerHTML ="Nomal Fn Clicked Me!!!"
+}
+
+function contextMenufn()
+{
+alert("You right-clicked on document")
+}
+function onDoubleclick()
+{
+var x = document.getElementById("demodb");
+x.innerHTML ="Wrongly you double Clicked Me!!!"
+}
+
+function OnmousDown()
+{
+var x = document.getElementById("demo_Mdown");
+x.innerHTML ="Why did you clicked!!!"
+document.getElementById("demo_Mdown").style.color ="red"
+}
+
+function OnmousUp()
+{
+var x = document.getElementById("demo_Mdown");
+x.innerHTML ="Thanks for releasing it!!!"
+document.getElementById("demo_Mdown").style.color ="Black"
+}
+
+
 </script>
+
 </body>
 </html>
