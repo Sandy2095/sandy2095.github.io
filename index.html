@@ -8,10 +8,29 @@
 </head>
 
 <body>
+
+<header>
+
 <h2><marquee behavior="scroll" bgcolor="Green" >
 Learning HTML &amp; CSS &amp; Java script</marquee>
 </h2>
+
+
+</header>
+
 <hr>
+
+
+<nav>
+
+<ul>
+
+<li> <a href="#">Home</a> </li>
+<li> <a href="#add_footer">Contact Us</a> </li>
+<li> <a href="#main_tile">Extra</a> </li>
+
+</ul>
+</nav>
 
 <div id="lendiv"><u>OnClick Events</u></div>
 <div id="upleft"><button id="nButton" onclick="clickfn()">Normal Fn Click Me</button>
@@ -25,16 +44,25 @@ Learning HTML &amp; CSS &amp; Java script</marquee>
 
 <hr>
 <div id="lendiv"><u>OnDoubleClick Events</u></div>
-<div id="upleft"><button id ="nlButton"  ondblclick="onDoubleclick()">Dont ever Double Click Me</button> </div>
+<div id="upleft"><button id ="nlButton"  ondblclick="onDoubleclick()">Don't ever Double Click Me</button> </div>
 <div id="upright"><marquee id="demodb" direction="right"> </marquee></div>
 <br><br><br>
 <hr>
 
 <div id="lendiv"><u>OnMouse Down / Up Events</u></div>
-<div id="upleft"><button id ="mousdown"  onmousedown="OnmousDown()" onmouseup="OnmousUp()">Dont click Mouse down</button> </div>
+<div id="upleft"><button id ="mousdown"  onmousedown="OnmousDown()" onmouseup="OnmousUp()">Don't click Mouse down</button> </div>
 <div id="upright"><marquee id="demo_Mdown" direction="right"> </marquee></div>
 <br><br><br>
 <hr>
+
+<div id="lendiv"><u>OnMouse Center / Leave Events</u></div>
+<div>You Want me to See Near</div>
+<div id="upleft"><img onmouseenter="Onmouscenter(this)" onmouseleave="OnmousLeave(this)" src="smiley.gif" alt="smiley" height="32" width="32"> </div>
+<br><br>
+<hr>
+
+
+
 
 <script>
 
@@ -86,8 +114,73 @@ x.innerHTML ="Thanks for releasing it!!!"
 document.getElementById("demo_Mdown").style.color ="Black"
 }
 
+function Onmouscenter(x)
+{
+x.style.height = "50px"
+x.style.width = "50px"
+}
 
+function OnmousLeave(x)
+{
+x.style.height = "32px"
+x.style.width = "32px"
+}
 </script>
+
+
+<article>
+
+<p>
+
+Sample test for article....</p>
+<aside> <p> Sample aside for article.......<br>
+Sample aside for article......<br>
+Sample aside for article......<br>
+<br>
+Sample aside for article......Sample aside for article......Sample aside for article......Sample aside for article......<br>
+Sample aside for article......Sample aside for article......Sample aside for article......<br>
+Sample aside for article......Sample aside for article......<br>
+Sample aside for article......<br>
+Sample aside for article......<br>
+Sample aside for article......Samp<br>le aside for article......Sample aside for article......Sample aside for article......<br>
+Sample aside for article......Sample aside for article......<br>
+Sample aside for article......<br>
+Sample aside for article......Samp<br>le aside for article......Sample aside for article......Sample aside for article......Sample aside for article......Sample aside for article......<br>
+Sample aside for article......<br>
+<br>
+Samp<br><br>le aside for article......Sample aside for article......<br><br>
+Sample aside for article......<br>
+Sample aside for article......Samp<br>le aside for article......Sample aside for article......<br><br>
+<br>
+<br>
+Sample aside for article......Sample aside for article......<br>
+Sample aside for article......<br>
+Sample aside for article......Samp<br>le aside for article......Sample aside for article......Sample aside for article...... </p></aside>
+
+
+</article>
+
+<hgroup>
+  <h1 id="main_tile">Main title</h1>
+  <h2>Secondary title</h2>  
+</hgroup>
+
+<footer id="add_footer">
+
+<address> 
+
+Santhosh Kumar E | Technical Lead  <br>
+Theorem Inc. <br>
+# 67C, Hootgalli Industrial Area, Mysore | India <br>
+
+M: +91 8553576234 <br>
+
+E: <a href ="mailto:santhosh.elumalai@theoreminc.net">Mailto </a> <br>
+W: <a href ="http://www.theoreminc.net"> Theorem India Pvt Ltd </a>|<br>
+
+</address>
+</footer>
+
 
 </body>
 </html>
