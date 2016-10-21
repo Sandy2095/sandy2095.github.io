@@ -1,0 +1,82 @@
+#bg-colr{
+	background-color : yellow;
+}
+body{
+	background-image : url("../images/logo.png");
+	background-color :light-blue;
+	background-repeat : no-repeat;  /*no-repeat,repeat-x,repeat-y*/
+	background-position : 100px;
+	background-attachment : scroll; /*fixed,scroll;*/	
+}
+#font_style{
+	font-family : georgia,garamond,serif;
+	font-style : oblique;	 /* normal , italic, Oblique */
+	font-variant : small-caps; /* normal,small-caps */
+	font-weight : normal; /* noraml, bold, bolder, lighter, 100,200,300,400,500,600,700,800,900	*/
+    /*font-size : smaller; /* x-small,xx-small,small,medium,large,x-large,xx-large,smaller,larger,size in pixels or in % */
+	/*font-size-adjust : 1;  x-height to make fonts more legible	Possible value could be any number.*/
+	font-stretch : ultra-expanded; /*normal, wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded.*/
+}
+
+#text_style{
+	color : red;
+	direction : ltr; /* rtl,ltr */
+	letter-spacing : 5px;
+	word-spacing : 5px;
+	text-indent : 1cm;
+	text-align : justify; /* left , right , center , justify*/
+	text-decoration : line-through;   /*none, underline, overline, line-through, blink */
+	text-transform : capitalize;  /* none, capitalize, uppercase, lowercase. */
+	white-space :  pre; /*normal, pre, nowrap */ 
+	text-shadow : 4px 4px 8px blue;
+}
+img{
+	border : 1px dashed red; /*solid red */
+	height : 50px; 
+	width : 100px; 
+	-moz-opacity : 0.6;/* not working */ 
+	filter:alpha(opacity=40); /* not working */
+}
+a:link{
+	color:green;	
+}
+a:visited{
+	color:red;	
+}
+a:hover{
+	color:blue;	
+}
+a:active{
+	color:black;	
+}
+table.collapse_tab{
+table-border : collapse;
+/*border:1px solid;*/
+width : 400px;
+/*empty-cells: hide;*/ 	/*show, hide or inherit*/
+}
+table.seperate_tab{
+table-border : seperate;
+/*border:1px solid;*/
+border-spacing : 10px 10px;
+width : 400px;
+empty-cells: show;  /*show, hide or inherit*/
+}
+td.each_first_cell {
+	border-style:dotted;
+	border-width:3px;
+	border-color:#000000; 
+	padding: 10px;
+}
+td.each_second_cell {
+	border-style:solid;
+	border-width:3px;
+	border-color:#333333;
+	padding:10px;
+}
+caption.bottom {
+	caption-side:bottom;   /*caption.top {caption-side:top}
+         caption.bottom {caption-side:bottom}
+         caption.left {caption-side:left}
+         caption.right {caption-side:right} */
+}

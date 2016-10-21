@@ -1,0 +1,211 @@
+<html>
+<head>
+<title> CSS </title>
+<h2>CSS - Cascasding Style Sheet</h2>
+<link rel="stylesheet" type="text/css" href="css_style.css">
+ </head>
+ <body>
+ <h3> <u>Advantages:</u></h3>
+ <ul>
+ <li> Saves time</li>
+ <li> Page load faster</li>
+ <li> Easy Maintaince</li>
+ <li> Multiple device compatability</li>
+ <li> Global Web Standards</li>
+ <li> Platform Independent</li>
+ </ul>
+ 
+ <h3> <u> CSS Version Info:</u></h3>
+
+ <ul>
+ <li> CSS1 - 1996</li>
+ <li>  CSS2 - 1998</li>
+ <li>  CSS3 - 1999</li>
+ </ul> 
+
+<h3> <u> Syntax:</u></h3> 
+
+Selector {property : value} 
+
+<ul>
+ <li
+Selector --> All tags </li>
+ <li>  property --> HTML attributes are converted in CSS properties</li>
+ <li> value --> Values are assigned to properties</li>
+ </ul>
+
+Ex: table {border : 1px; color:#FFFFFF }
+
+<h3> <u> Types of Selectors:</u></h3> 
+
+
+<p> <u>Type Selector</u>  --> h1{color : #FFFFFF} </p>
+<p> <u>Universal Selector </u>---> * {color:#23465}</p>
+<p> <u>Descendant Selector</u> ---> Apply style to particular element when lies inside particular element , ul em {color:#FFFFFF}</p>
+<p> <u>Class Selector</u> --->Based on class attributes .black{color:#ffffff} , h1.black{color:#ffff}</p>
+<p> <u>ID Selector</u> --> based on Id attributes of elements , #black{#ffffff}</p>
+<p> <u>Child Selector </u>--->similar tot Descendant , direct funcationality of  , body > p {color:#ffffff}</p>
+<p> <u>Attribute Selector</u> ---> Applies to particular attributes , input[type ="text"] { color : #ffffff } , = -> exactly , ~= -> Contains, |= -> exactly starts or starts with..</p>
+<p> <u>Grouping Selector</u> -->many elements with comma seperated , h1,h2,h3 {color : #ffffff} </p>
+
+<h3> <u>4 ways to associate styles in HTML:</u></h3> 
+
+<p> <u>Embedded CSS </u>--> put css rules into html doc using <!--<style> element , inside <head> tag , <style type="text/css" media="All"> body {color:#ffffff} h1 {color:#444444}--></p>
+<p> <u> Inline CSS </u> --> rule will be appiled to particulat element <element style ="----style rules"> </p>
+<p> <u> External CSS</u> --> <link> element can be used to include external stylesheet file with .css extension, <link type ="text/css" href ="URL" media="" /> </p>
+<p> <u> Imported CSS</u> --> @import used to import external style sheet , <head> @import "URL"</head> , <head> @import url("URL") </head>
+
+<h3> <u>Rules Overridding:</u></h3> 
+<ul>
+ <li> inline stylesheet takes highest priority override any rule defined in external style sheet file or style tag </li>
+ <li> style defined in style tag will get override with external style sheet file </li>
+ <li> Rules defined in external style sheet is lowest prioirty </li>
+ </ul>
+
+<h3> <u>CSS Comments:</u></h3> 
+
+ Single line comments /* ....*/
+
+<h3> <u>Measurement Units:</u></h3> 
+
+<table border=1>
+
+<tr><th>Unit</th><th>Description</th><th>Example</th></tr>
+<tr><td>%</td><td>Percentage relative to another value</td><td>line-height:125%</td></tr>
+<tr><td>cm</td><td>centimeters</td><td>margin-bottom:2cm</td></tr>
+<tr><td>em</td><td>Relative measurement for font in em spaces, each em unit is 12pt thus 2em = 24pt</td><td>p{letter-spacing:7em}</td></tr>
+<tr><td>ex</td><td>Defines measurement relative to font X-height,height of font in lowercase letter x</td><td>p{font-size:24pt;line-height:2ex}</td></tr>
+<tr><td>in</td><td>inches</td><td>p{word-spacing:15in}</td></tr>
+<tr><td>mm</td><td>measurement in millimeters</td><td>p{word-spacing:15mm}</td></tr>
+<tr><td>pc</td><td>measurement in picas , A picas is equlaivent to 12 pt, there are 6pica per inch </td><td>p{font-size:6pc}</td></tr>
+<tr><td>pt</td><td>defined in points ,1/72nd of inch</td><td>body{font-size:18pt}</td></tr>
+<tr><td>px</td><td>defined in screen pixels</td><td>p{padding:15px}</td></tr>
+<tr><td>vh</td><td>1% of viewport height</td><td>h2{font-size:3.0vh}</td></tr>
+<tr><td>vw</td><td>1% of viewport width</td><td>h2{font-size:3.0vw</td></tr>
+<tr><td>vmin</td><td>1vw or 1vh ,whichever is smaller</td><td>p{font-size:2vmin}</td></tr>
+</table>
+
+
+<h3> <u>CSS color:</u></h3> 
+
+<p>Set a color foreground of an element or background of an element, color of borders and other decorative effects.</p>
+
+<table border=1 id="colo-tble">
+
+<tr><th>Format</th><th>Syntax</th><th>Example</th></tr>
+<tr><td>Hex Code</td><td>#RRGGBB</td><td>p{color:#FF00FF}</td></tr>
+<tr><td>Short Hex Code</td><td>#RGB</td><td>p{color:#6A9})</td></tr>
+<tr><td>RGB %</td><td>rgb(rrr%,ggg%,bbb%)</td><td>{color:rgb(50%,50%,50%)} , Not recomended to use most of the browser doesn't support</td></tr>
+<tr><td>RGB Absliute</td><td>egb(rr,ggg,bbb)</td><td>p{color:rgb(0,0,255)}, Not recomended to use most of the browser doesn't support</td></tr>
+<tr><td>Keyword</td><td>aqua,black,green,etc</td><td>p{color:green}</td></tr>
+
+</table>
+
+
+<h3> <u>CSS Background:</u></h3> 
+
+<ul>
+ <li><u>background-color</u> , set background color of element</li> <p id="bg-colr" > This is test background color</p>
+ <li><u>background-image </u>, set background image of an element</li> 
+ <li><u>background-repeat</u>, used to control the repetation of the image in background  /*no-repeat,repeat-x,repeat-y*/</li> 
+ <li><u>background-position</u>, used to control the position of the image in background</li>
+ <li><u>background-attachment</u>, used to control the scrolling of the image in background /*fixed,scroll;*/</li>
+ 
+</ul> 
+
+<h3> <u>CSS Font:</u></h3> 
+
+<ul>
+ <li><u>Font-Family</u> , Change face of the font</li> 
+ <li><u>Font-Style</u> , Used to make font italic or oblique /* normal , italic, Oblique */</li> 
+ <li><u>Font-variant </u> ,Used to create small caps effect /* normal,small-caps */</li> 
+ <li><u>Font-weight</u> , Used to increase or decrease how bold or light a font appears  /* noraml, bold, bolder, lighter, 100,200,...,800,900	*/</li> 
+ <li><u>Font-size</u> , Used to increase or decrease the size of the font /* x-small,xx-small,small,medium,large,x-large,xx-large,smaller,larger,size in pixels or in % */</li> 
+   <li><u>Font-shorthand</u> /* style tag font:italic small-caps bold 15px georgia; */</li> 
+</ul> 
+
+<p><u>Example</u></p>
+
+<p id="font_style"> This is test paragragh, to check whether font css is working fine for the same. </p>
+
+
+<h3> <u>CSS Text:</u></h3> 
+
+<ul>
+ <li><u>color</u> , set color of text color:red</li> 
+ <li><u>direction</u> , set directon of text , lrt,rtl /* direction:rtl*/</li> 
+ <li><u>letter-spacing </u> ,space between characters , Possible values are normal or number specifying space</li> 
+ <li><u>word-spacing</u> , set the space between words. Possible values are normal or number specifying space</li> 
+ <li><u>text-indent</u> , indent the first line of a paragraph. Possible values are % or number specifying space</li> 
+   <li><u>text-align</u> how to align a text. Possible values are left, right, center, justify.</li> 
+   <li><u>text-decoration</u> how to decorate a text. Possible values are none, underline, overline, line-through, blink.</li> 
+   <li><u>text-shadow</u>  how to set the shadow around a text. This may not be supported by all the browsers.</li> 
+   <li><u>white-space</u>  how white space inside an element is handled. Possible values are normal, pre, nowrap.</li> 
+   <li><u>text-transform</u> how to set the cases for a text. Possible values are none, capitalize, uppercase, lowercase.</li> 
+</ul> 
+
+<p><u>Example</u></p>
+
+<p id="text_style"> This is test paragragh, to check whether text css is working fine for the same. </p>
+
+
+<h3> <u>CSS Images:</u></h3> 
+<ul>
+ <li><u>border</u> , set the width of an image border</li> 
+ <li><u>height</u> , set the height of an image</li> 
+ <li><u>weight</u> ,set the width of an image</li> 
+ <li><u>-moz-opacity</u> ,set the opacity of an image.</li> 
+ </ul>
+ <p><u>Example</u></p>
+ <img src ="../images/logo.png" />
+ 
+<h3> <u>CSS Links:</u></h3> 
+<ul>
+ <li><u>:link</u> ,signifies  unvisited hyperlinks</li> 
+ <li><u>:visited</u> ,signifies  visited hyperlinks</li> 
+ <li><u>:hover</u> ,element that currently has user's mouse pointer hovering over it</li> 
+ <li><u>:active</u> ,signifies an element on which the user is currently clicking</li> 
+ </ul>
+
+ <p><u>Example</u></p>
+ <a id="link_css" href ="#" >:link</a>
+  
+<h3> <u>CSS Tables:</u></h3> 
+
+<ul>
+ <li><u>border-collapse</u> ,should control appearence of the adjcent borders that touch each other or whether each cell should maintain it style /*collapse and separate*/ </li> 
+ <li><u>border-spacing</u> ,specifies the width that should appear between each table cell Unfortunately, this property does not work in Netscape 7 or IE 6. </li> 
+ <li><u>caption-side</u> ,caption tag control the palcement of the table caption</li> 
+ <li><u>empty-cells</u> ,whether border should show if the a cell is empty /*show, hide or inherit*/</li> 
+ <li><u>table-layout</u> ,allows browsers to speed up layout of a table by using the first width properties </li> 
+ </ul>
+ 
+<p><u>Example</u></p>
+  
+   <table class="collapse_tab">
+         <caption class="bottom">Collapse Border Example</caption>
+         <tr><td class="each_first_cell"> Cell A Collapse Example</td> <td class="each_first_cell"> Cell A1 Collapse Example</td> </tr>
+         <tr><td class="each_second_cell"> Cell B Collapse Example</td></tr>
+      </table>
+      <br />
+      
+      <table class="seperate_tab" >
+         <caption>Separate Border Example</caption>
+         <tr><td class="each_first_cell"> Cell A Separate Example</td>  <td class="each_first_cell"> Cell A1 Collapse Example</td> </tr>
+         <tr><td class="each_second_cell"> Cell B Separate Example</td></tr>
+      </table>
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+ 
